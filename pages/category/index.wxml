@@ -1,0 +1,22 @@
+<van-search shape="round" background="#ff2d4a" placeholder="请输入搜索关键词" bind:focus="onFocus" />
+<view class="content">
+  <scroll-view class="menu" scroll-y>
+    <view wx:for="{{leftMenuList}}" wx:key="index" class="{{index===menuIndex?'active':''}}" data-index="{{index}}" bindtap="onMenu">{{item}}</view>
+  </scroll-view>
+  <scroll-view class="container" scroll-y>
+    <view class="goods_group" wx:for="{{rightContent}}" wx:for-index="cate_index" wx:key="cat_id"
+      wx:for-item="cate_item">
+      <view class="goods_title">
+        <text class="delimiter">/</text>
+        <text class="title">{{cate_item.cat_name}}</text>
+        <text class="delimiter">/</text>
+      </view>
+      <view class="goods_list">
+        <navigator wx:for="{{cate_item.children}}" wx:for-item="good_item" wx:for-index="good_index" wx:key="cat_id" url="../goods_list/index?cid={{good_item.cat_id}}">
+          <image mode="widthFix" src="{{good_item.cat_icon}}" />
+          <view class="goods_name">{{good_item.cat_name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>

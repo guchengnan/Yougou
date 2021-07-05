@@ -1,0 +1,51 @@
+<view wx:if="{{!isLogin}}" class="out">
+  <van-icon name="user-o" />
+  <van-button color="#ff2d4a" round block bind:click="onLogin">一键登录</van-button>
+</view>
+<view wx:else class="in">
+  <view class="avatar">
+    <view>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view class="info">
+    <van-grid column-num="4" border="{{ false }}">
+      <van-grid-item use-slot>
+        <view>8</view>
+        <view>收藏的店铺</view>
+      </van-grid-item>
+      <van-grid-item use-slot>
+        <view>14</view>
+        <view>收藏的商品</view>
+      </van-grid-item>
+      <van-grid-item use-slot>
+        <view>18</view>
+        <view>关注的商品</view>
+      </van-grid-item>
+      <van-grid-item use-slot>
+        <view>84</view>
+        <view>足迹</view>
+      </van-grid-item>
+    </van-grid>
+  </view>
+  <view class="order">
+    <view>我的订单</view>
+    <van-grid border="{{false}}">
+      <van-grid-item icon="todo-list-o" text="待付款" />
+      <van-grid-item icon="logistics" text="待收货" />
+      <van-grid-item icon="refund-o" text="退款/退货" />
+      <van-grid-item icon="description" text="全部订单" />
+    </van-grid>
+  </view>
+  <view class="tool">
+    <van-cell title="收货地址" is-link bind:click="onAddress" />
+    <van-cell is-link>
+      <button slot="title" open-type="contact">联系客服</button>
+    </van-cell>
+    <van-cell is-link>
+      <button slot="title" open-type="feedback">意见反馈</button>
+    </van-cell>
+    <van-cell title="退出登录" is-link bind:click="onLogout" />
+  </view>
+</view>

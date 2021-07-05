@@ -1,0 +1,20 @@
+<van-search shape="round" background="#ff2d4a" placeholder="请输入搜索关键词" bind:focus="onFocus" />
+<van-tabs color="#ff2d4a">
+  <van-tab title="综合">
+    <van-card
+      wx:for="{{goodList}}"
+      wx:key="index"
+      price="{{item.goods_price}}"
+      title="{{item.goods_name}}"
+      thumb="{{ item.goods_big_logo }}"
+      data-goods_id="{{item.goods_id}}"
+      bindtap="onJump"
+    />
+  </van-tab>
+  <van-tab title="好评">
+    <van-empty description="暂无数据" />
+  </van-tab>
+  <van-tab title="销量">
+    <van-empty description="暂无数据" />
+  </van-tab>
+</van-tabs>

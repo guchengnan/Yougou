@@ -1,0 +1,35 @@
+page {
+  padding-bottom: 50px;
+}
+.contact {
+  min-height: 160rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.contact .van-icon {
+  color: #646566;
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+.contact .van-cell-group {
+  width: 80vw;
+}
+.contact > view {
+  flex: 1;
+}
+.van-swipe-cell {
+  background-color: #fafafa;
+  border-top: 1px solid #ebedf0;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+.van-swipe-cell__right {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee0a24;
+  padding: 0 10px;
+}

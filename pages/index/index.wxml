@@ -1,0 +1,26 @@
+<van-search
+  shape="round"
+  background="#ff2d4a"
+  placeholder="请输入搜索关键词"
+  bind:focus="onFocus"
+/>
+<swiper indicator-dots="{{true}}" autoplay="{{true}}">
+  <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+    <image mode="widthFix" src="{{item.image_src}}"/>
+  </swiper-item>
+</swiper>
+<van-grid border="{{false}}">
+  <van-grid-item wx:for="{{cateList}}" wx:key="index" icon="{{item.image_src}}" url="{{item.navigator_url}}" />
+</van-grid>
+<view class="card">
+  <view class="card-item" wx:for="{{floorList}}" wx:key="index">
+    <view class="card-title">
+      <image src="{{item.floor_title.image_src}}" mode="widthFix"></image>
+    </view>
+    <view class="card-content">
+      <view wx:for="{{item.product_list}}" wx:key="index">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>

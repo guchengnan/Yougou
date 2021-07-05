@@ -1,0 +1,23 @@
+swiper {
+  height: 600rpx;
+}
+swiper image {
+  width: 100%;
+  display: block;
+}
+.detail {
+  padding: 10rpx 20rpx 100rpx;
+}
+.detail .price {
+  color: #ff2d4a;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.detail .name {
+  display: flex;
+  margin: 10rpx 0;
+}
+.detail .name > view {
+  width: 120rpx;
+  text-align: center;
+}

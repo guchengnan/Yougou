@@ -1,0 +1,4 @@
+image {
+  margin: 50rpx auto;
+  display: block;
+}

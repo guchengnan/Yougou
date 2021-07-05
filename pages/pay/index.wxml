@@ -1,0 +1,5 @@
+<van-notice-bar
+  left-icon="volume-o"
+  text="个人主体小程序不能使用微信支付接口。"
+/>
+<image src="../../assets/images/pay.jpg" mode="widthFix"></image>

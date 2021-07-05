@@ -1,0 +1,14 @@
+<van-search
+  shape="round"
+  background="#ff2d4a"
+  placeholder="请输入搜索关键词"
+  bind:search="onSearch"
+  bind:clear="onSearch"
+/>
+<van-empty wx:if="{{!goodList.length}}" description="暂无数据" />
+<view class="goods">
+  <view wx:for="{{goodList}}" wx:key="index" class="goods-item">
+    <navigator url="../goods_detail/index?goods_id={{item.goods_id}}">{{item.goods_name}}</navigator>
+    <van-icon name="arrow" />
+  </view>
+</view>

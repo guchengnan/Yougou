@@ -1,0 +1,22 @@
+<swiper indicator-dots="{{true}}" autoplay="{{true}}">
+  <swiper-item wx:for="{{goodDetail.pics}}" wx:key="index">
+    <image mode="widthFix" src="{{item.pics_mid}}" data-src="{{item.pics_mid}}" bindtap="onPreview"/>
+  </swiper-item>
+</swiper>
+<view class="detail">
+  <view class="price">￥{{goodDetail.goods_price}}</view>
+  <view class="name">
+    <text>{{goodDetail.goods_name}}</text>
+    <view>
+      <van-icon name="star-o" />
+      <view>收藏</view>
+    </view>
+  </view>
+  <rich-text nodes="{{goodDetail.goods_introduce}}"></rich-text>
+</view>
+<van-goods-action>
+  <van-goods-action-icon icon="shop-o" text="店铺" bind:click="onShop" />
+  <van-goods-action-icon icon="cart-o" text="购物车" info="{{cartCount}}" bind:click="onCart" />
+  <van-goods-action-button text="加入购物车" type="warning" bind:click="onAddCart" />
+  <van-goods-action-button text="立即购买" />
+</van-goods-action>

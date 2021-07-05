@@ -1,0 +1,69 @@
+.out {
+  height: 100vh;
+  padding: 0 50rpx;
+  text-align: center;
+}
+.out van-icon {
+  color: #fff;
+  width: 140rpx;
+  height: 140rpx;
+  font-size: 80rpx;
+  border-radius: 50%;
+  margin: 400rpx auto 40rpx;
+}
+.in {
+  min-height: 100vh;
+  background-image: linear-gradient(#ff2d4a 0, #ff2d4a 400rpx,#ebedf0  400rpx,#ebedf0);
+}
+.in > .avatar {
+  height: 330rpx;
+  padding-top: 60rpx;
+  text-align: center;
+}
+.in > .avatar > view {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 10rpx auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.in > .avatar > open-data:last-child {
+  color: #fff;
+}
+.in > .info {
+  margin: 0 20rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.in > .order {
+  margin: 20rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.in > .order > view {
+  color: #333;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-indent: 1em;
+  border-bottom: 1px solid #ebedf0;
+}
+.in > .tool {
+  margin: 0 20rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+.in > .tool button {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  display: inline;
+  height: inherit;
+  line-height: inherit;
+}
+.in > .tool button::after {
+  display: none;
+}
